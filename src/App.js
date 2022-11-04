@@ -3,7 +3,7 @@ import './App.css';
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faEdit, faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
 const url="http://localhost:5000/clima/";
@@ -99,12 +99,15 @@ console.log(this.state.form);
   return (
     <div className="App">
     <br /><br /><br />
-  <button className="btn btn-success" onClick={()=>{this.setState({form: null, tipoModal: 'insertar'}); this.modalInsertar()}}>Agregar clima</button>
+    <h1 className='titulo'>Estado Climatico</h1><br/>
+  <div className='container text-center'>
+    <button className="btn btn-success" onClick={()=>{this.setState({form: null, tipoModal: 'insertar'}); this.modalInsertar()}}>Agregar clima</button>
+  </div>
   <br /><br />
     <table className="table ">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>ID<br/></th>
           <th>Mes</th>
           <th>Horas Solares</th>
           <th>Dias lluvia</th>
